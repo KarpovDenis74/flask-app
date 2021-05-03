@@ -55,6 +55,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }} # если ваш ssh-ключ защищен паролем
         script: |
-          sudo docker pull KarpovDenis74/flask-app
+          sudo docker pull fotokarpov/flask-app
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 fotokarpov/flask-app
